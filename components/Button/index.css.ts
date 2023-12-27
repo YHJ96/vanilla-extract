@@ -55,9 +55,12 @@ const button = style([
   },
 ]);
 
-const buttonMapping = styleVariants({
-  primary: [button, { background: 'blue' }],
-  secondary: [button, { background: 'aqua' }],
-});
+const variant = {
+  primary: 'blue',
+  secondary: 'aqua',
+};
+
+// 함수 변형으로 사용하면 variant 객체가 추가되더라도 유연하게 관리는 가능함, 이전 맵핑보다 가독성은 떨어지는 느낌
+const buttonMapping = styleVariants(variant, (background) => [button, { background }]);
 
 export { buttonMapping };
