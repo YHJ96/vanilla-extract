@@ -13,6 +13,13 @@ const cardContainer = style({
     translate: '0px -5px',
     transition: 'all 0.5s ease-in',
   },
+
+  '@media': {
+    // 해당 조건문 자동완성 기능 찾아봐야 함
+    'screen and (min-width: 768px)': {
+      padding: '0px 10px',
+    },
+  },
 });
 
 const imgWrapper = style({
