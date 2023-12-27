@@ -1,0 +1,44 @@
+import { style } from '@vanilla-extract/css';
+
+const cardContainer = style({
+  display: 'flex',
+  flexDirection: 'column',
+  position: 'relative',
+  width: 384,
+  borderRadius: '16px',
+  boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+  backgroundColor: 'hsl(210, 16%, 96%)',
+});
+
+const imgWrapper = style({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  margin: 0,
+  overflow: 'hidden',
+  borderStartStartRadius: 'inherit',
+  borderStartEndRadius: 'inherit',
+  borderEndStartRadius: 'inherit',
+  borderEndEndRadius: 'inherit',
+});
+
+const cardBody = style({
+  display: 'flex',
+  flex: '1 1 auto',
+  flexDirection: 'column',
+  padding: 16,
+  gap: 8,
+  margin: 0,
+});
+
+const cardTitle = style({
+  display: 'flex',
+  alignItems: 'center',
+  gap: 8,
+  fontSize: 20,
+  lineHeight: '28px',
+  fontWeight: 600,
+  margin: 0,
+});
+
+export { cardContainer, imgWrapper, cardTitle, cardBody };
