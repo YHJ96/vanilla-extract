@@ -29,6 +29,7 @@ const button = style([
     lineHeight: '1em',
     fontWeight: '600',
     borderWidth: 1,
+    color: '#FDFDFD',
   },
 
   // merge
@@ -54,9 +55,9 @@ const button = style([
   },
 ]);
 
-const background = styleVariants({
-  primary: { background: 'blue' },
-  secondary: { background: 'aqua' },
+const buttonMapping = styleVariants({
+  primary: [button, { background: 'blue' }],
+  secondary: [button, { background: 'aqua' }],
 });
 
-export { button, background };
+export { buttonMapping };

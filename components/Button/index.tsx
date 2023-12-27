@@ -1,5 +1,5 @@
 import React from 'react';
-import { button, background } from './index.css';
+import { buttonMapping } from './index.css';
 
 type Props = {
   variant: 'primary' | 'secondary';
@@ -8,7 +8,7 @@ type Props = {
 
 function Button({ variant, children }: Props) {
   return (
-    <button type="button" className={background[variant]}>
+    <button type="button" className={buttonMapping[variant]}>
       {children}
     </button>
   );
