@@ -1,13 +1,18 @@
 import { style } from '@vanilla-extract/css';
 
 const cardContainer = style({
-  display: 'flex',
-  flexDirection: 'column',
-  position: 'relative',
-  width: 384,
-  borderRadius: '16px',
-  boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
-  backgroundColor: 'hsl(210, 16%, 96%)',
+  'display': 'flex',
+  'flexDirection': 'column',
+  'position': 'relative',
+  'width': 384,
+  'borderRadius': '16px',
+  'boxShadow': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+  'backgroundColor': 'hsl(210, 16%, 96%)',
+
+  ':hover': {
+    translate: '0px -5px',
+    transition: 'all 0.5s ease-in',
+  },
 });
 
 const imgWrapper = style({
@@ -18,8 +23,6 @@ const imgWrapper = style({
   overflow: 'hidden',
   borderStartStartRadius: 'inherit',
   borderStartEndRadius: 'inherit',
-  borderEndStartRadius: 'inherit',
-  borderEndEndRadius: 'inherit',
 });
 
 const cardBody = style({
