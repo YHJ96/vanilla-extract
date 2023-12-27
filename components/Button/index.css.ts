@@ -1,4 +1,12 @@
 import { style } from '@vanilla-extract/css';
+import type { StyleRule } from '@vanilla-extract/css';
+
+const responsiveStyle = ({ tablet, desktop }: { tablet: StyleRule; desktop: StyleRule }) => ({
+  '@media': {
+    'screen and (min-width: 768px)': tablet,
+    'screen and (min-width: 1024px)': desktop,
+  },
+});
 
 const padding = style({ padding: '0px 16px' });
 
@@ -21,6 +29,28 @@ const button = style([
     lineHeight: '1em',
     fontWeight: '600',
     borderWidth: 1,
+  },
+
+  // merge
+  responsiveStyle({
+    tablet: {
+      ':hover': {
+        backgroundColor: 'red',
+      },
+    },
+    desktop: {
+      ':hover': {
+        backgroundColor: 'blue',
+      },
+    },
+  }),
+
+  {
+    '@media': {
+      'screen and (min-width: 768px)': {
+        padding: '10px 50px',
+      },
+    },
   },
 ]);
 
