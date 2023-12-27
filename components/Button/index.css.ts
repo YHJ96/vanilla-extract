@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { style, styleVariants } from '@vanilla-extract/css';
 import type { StyleRule } from '@vanilla-extract/css';
 
 const responsiveStyle = ({ tablet, desktop }: { tablet: StyleRule; desktop: StyleRule }) => ({
@@ -54,4 +54,9 @@ const button = style([
   },
 ]);
 
-export { button };
+const background = styleVariants({
+  primary: { background: 'blue' },
+  secondary: { background: 'aqua' },
+});
+
+export { button, background };

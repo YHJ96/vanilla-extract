@@ -5,7 +5,7 @@ function Home() {
   return (
     <main>
       <Card />
-      <Button>상세보기</Button>
+      <Button variant="primary">상세보기</Button>
     </main>
   );
 }
