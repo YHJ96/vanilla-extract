@@ -1,7 +1,9 @@
-import { style, createVar } from '@vanilla-extract/css';
+import { style, createVar, fallbackVar } from '@vanilla-extract/css';
 
 // CSS 변수를 만들고 공유 사용처 모르겠음 ... Global로 전부 지정해 놓고 사용하는게 편할 것 같다는 생각
 const widthVar = createVar();
+
+const borderRadiusVar = createVar();
 
 const cardContainer = style({
   'vars': {
@@ -12,7 +14,8 @@ const cardContainer = style({
   'flexDirection': 'column',
   'position': 'relative',
   'width': widthVar,
-  'borderRadius': '16px',
+  // fallback 역할 var(value, default) 문법과 같음
+  'borderRadius': fallbackVar(borderRadiusVar, '16px'),
   'boxShadow': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
   'backgroundColor': 'hsl(210, 16%, 96%)',
 
