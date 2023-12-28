@@ -1,11 +1,12 @@
 import { style } from '@vanilla-extract/css';
-import theme from '@/styles/theme.css';
+import { theme, variantTheme } from '@/styles/theme.css';
 
+// inheritanceTheme Class로 수정 완료
 const [themeClass, vars] = theme;
 
 // Class를 삽입후 변수 사용
 const container = style([
-  themeClass,
+  variantTheme,
   {
     display: 'flex',
     width: '324px',
