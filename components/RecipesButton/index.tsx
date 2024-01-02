@@ -7,7 +7,7 @@ type Props = {
 
 function RecipesButton({ children, ...rest }: Props) {
   return (
-    <button className={btn({ color: 'orange' })} type="button" {...rest}>
+    <button className={btn({ color: 'orange', fill: true })} type="button" {...rest}>
       {children}
     </button>
   );
