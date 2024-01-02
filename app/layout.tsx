@@ -1,5 +1,6 @@
 import { Noto_Sans } from 'next/font/google';
 import type { Metadata } from 'next';
+import '@/styles/reset.css';
 
 const noto = Noto_Sans({ display: 'auto', subsets: ['latin'], variable: '--font-noto-sans' });
 
