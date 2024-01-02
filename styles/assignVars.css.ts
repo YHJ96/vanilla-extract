@@ -27,4 +27,16 @@ const responsiveTheme = style({
   },
 });
 
-export { responsiveTheme };
+// CSS 부분적으로 적용이 가능함
+const partialResponsiveTheme = style({
+  '@media': {
+    'screen and (min-width: 1024px)': {
+      vars: assignVars(vars.color, {
+        red: 'crimson',
+        blue: 'cornflowerblue',
+      }),
+    },
+  },
+});
+
+export { responsiveTheme, partialResponsiveTheme };
