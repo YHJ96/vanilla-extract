@@ -1,4 +1,5 @@
 import { style, createVar, fallbackVar } from '@vanilla-extract/css';
+import { vars } from '@/styles/fontFace.css';
 
 // CSS 변수를 만들고 공유 사용처 모르겠음 ... Global로 전부 지정해 놓고 사용하는게 편할 것 같다는 생각
 const widthVar = createVar();
@@ -18,6 +19,8 @@ const cardContainer = style({
   'borderRadius': fallbackVar(borderRadiusVar, '16px'),
   'boxShadow': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
   'backgroundColor': 'hsl(210, 16%, 96%)',
+  // 폰트 스타일 적용 완료
+  'fontFamily': vars.font.noto,
 
   ':hover': {
     translate: '0px -5px',
